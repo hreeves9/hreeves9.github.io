@@ -4,6 +4,32 @@
    <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
+   <script>
+   $(document).ready(function(){
+     // Add smooth scrolling to all links
+     $("a").on('click', function(event) {
+
+       // Make sure this.hash has a value before overriding default behavior
+       if (this.hash !== "") {
+         // Prevent default anchor click behavior
+         event.preventDefault();
+
+         // Store hash
+         var hash = this.hash;
+
+         // Using jQuery's animate() method to add smooth page scroll
+         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+         $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 800, function(){
+
+           // Add hash (#) to URL when done scrolling (default click behavior)
+           window.location.hash = hash;
+         });
+       } // End if
+     });
+   });
+   </script>
    <style>
       html {
       font-family: 'Raleway', sans-serif;
@@ -109,7 +135,7 @@
       #topcloser a:hover{
       color: #000;
       }
-      #closer{
+      #contact{
 
       text-align: center;
       width: 70%;
@@ -176,6 +202,7 @@
         #hi{
           font-size: 2em;
         }
+
       }
    </style>
 </head>
@@ -208,7 +235,7 @@
         <br>
         <br>
     <a href = "https://github.com/SoarGroup/UE4-Integration"><img id = "github" src = "github.png"></a>
-        <p>Connected the SOAR Cognitive Architecture to Unreal Engine to create 3D games with self-controlled agents.</p>
+        <p id = "description">Connected the SOAR Cognitive Architecture to Unreal Engine to create 3D games with self-controlled agents.</p>
 
         <p id = "tools">C++, C#, Unreal Engine</p>
 
@@ -219,7 +246,7 @@
         <br>
         <br>
         <a href = "https://github.com/hreeves9/TrafficLight"><img id = "github" src = "github.png"></a>
-        <p>A social media platform created so that friends could communicate when they are available or busy.</p>
+        <p id = "description">A social media platform created so that friends could communicate when they are available or busy.</p>
         <p id = "tools">Flask, Python, Xcode, Objective-C, MySQL</p>
       </div>
       <div class = "portfolioItem">
@@ -228,7 +255,7 @@
         <br>
         <br>
         <a href = "https://github.com/hreeves9/bathroomwall"><img id = "github" src = "github.png"></a>
-        <p>An anonymous social media platform that allowed users to leave comments, as if they were writing on the bathroom wall.</p>
+        <p id = "description">An anonymous social media platform that allowed users to leave comments, as if they were writing on the bathroom wall.</p>
         <p id = "tools">Flask, Python, MySQL</p>
       </div>
       <div class = "portfolioItem" id ="two">
@@ -237,7 +264,7 @@
         <br>
         <br>
         <a href = "https://github.com/hreeves9/RedditWOTDBot"><img id = "github" src = "github.png"></a>
-        <p>Created a Reddit bot that picked a word of the day and notified users when it was used; never launched.</p>
+        <p id = "description">Created a Reddit bot that picked a word of the day and notified users when it was used; never launched.</p>
         <p id = "tools">PRAW, Python</p>
       </div>
       <div class = "portfolioItem">
@@ -245,13 +272,13 @@
         <p id = "date">SUMMER/FALL 2017</p>
         <br>
         <br>
-        <p>Designed a 3D modeled set for the Pirates of Penzance Musical with Oculus Rift integration.</p>
+        <p id = "description">Designed a 3D modeled set for the Pirates of Penzance Musical with Oculus Rift integration.</p>
         <p id = "tools">Unity, Blender, C#</p>
       </div>
 
    </div>
-   <div id="closer">
-      <a name="contact"></a>
+   <div id="contact">
+
       <p id = "topcloser">I'm always looking for new freelance projects. Shoot me an <a id = "email" href="mailto:harvey_reeves9@icloud.com">email</a> or hit me up on social media.</p>
       <div id = "buttons">
         <a href = "https://twitter.com/harvey_reeves9"><img id = "closerimage" src = "twitter.png"></a>
