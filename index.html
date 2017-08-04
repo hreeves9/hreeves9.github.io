@@ -95,11 +95,11 @@
       }
       #topcloser{
       margin: 50px 25px 0px;
-      font-size: 3em;
+      font-size: 3em
       }
       #topcloser a{
       text-decoration: none;
-      color: #000;
+      color: #737373;
       -o-transition: .3s;
       -ms-transition: .3s;
       -moz-transition: .3s;
@@ -107,10 +107,15 @@
       transition: .3s;
       }
       #topcloser a:hover{
-      color: #D0D0D0;
+      color: #000;
       }
       #closer{
-      margin-top:10%;
+
+      text-align: center;
+      width: 70%;
+      left: 0;
+      right: 0;
+      margin: 10% auto 0 auto;
       }
       .portfolioItem h1{
         float: left;
@@ -152,7 +157,14 @@
       }
       #portfolioHeader{
         margin-left: 10%;
-        font-size: 3em;
+        font-size: 2em;
+      }
+      #email{
+        color: #e5e5e5;
+      }
+      #closerimage{
+        width: 10%;
+        margin: 5% 0;
       }
    </style>
 </head>
@@ -177,7 +189,7 @@
       </div>
    </div>
    <div id="portfolio">
-     <h1 id = "portfolioHeader">Portfolio</h1>
+     <h1 id = "portfolioHeader">Some cool stuff I've been working on recently</h1>
       <a name="portfolio"></a>
       <div class = "portfolioItem">
         <h1>SOAR/UE4 Integration</h1>
@@ -229,7 +241,12 @@
    </div>
    <div id="closer">
       <a name="contact"></a>
-      <p id = "topcloser">Interested in working with me? <a href="mailto:harvey_reeves9@icloud.com">Shoot me an email.</a></p>
+      <p id = "topcloser">I'm always looking for new freelance projects. Shoot me an <a id = "email" href="mailto:harvey_reeves9@icloud.com">email</a> or hit me up on social media.</p>
+      <div id = "buttons">
+        <a href = "https://twitter.com/harvey_reeves9"><img id = "closerimage" src = "twitter.png"></a>
+        <a href = "https://instagram.com/harvey_reeves9"><img id = "closerimage" src = "instagram.png"></a>
+        <a href = "https://github.com/hreeves9"><img id = "closerimage" src = "github2.png"></a>
+      </div>
    </div>
    <script type="text/javascript">
       $(function() {
