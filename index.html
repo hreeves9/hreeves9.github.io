@@ -1,536 +1,298 @@
 <!DOCTYPE html>
-
-<html>
 <head>
-  <title>The Romancers</title>
+   <title>Harvey Reeves</title>
+   <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
+   <script>
+   $(document).ready(function(){
+     // Add smooth scrolling to all links
+     $("a").on('click', function(event) {
 
-	<meta charset="utf-8"/>
-  <style type="text/css">
-html {
-    /* the line height value of 1.9 is fixed for a line height multiple of 1.4 in the text view */
-    font: normal 93.8%/1.9 serif;
-}
+       // Make sure this.hash has a value before overriding default behavior
+       if (this.hash !== "") {
+         // Prevent default anchor click behavior
+         event.preventDefault();
 
-body {
-    font-family: 'Menlo', Helvetica, Georgia, serif;
-    word-wrap: break-word;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    overflow:hidden;
-    background-color: #f2f2f2;
-    color: #3c3c3c;
-}
+         // Store hash
+         var hash = this.hash;
 
-/**
- *
-    Wrappers
- *
- */
+         // Using jQuery's animate() method to add smooth page scroll
+         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+         $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 800, function(){
 
-#wrapper {
-    position: fixed;
-    width: 99.9%;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font-size: 1.0em;
-}
+           // Add hash (#) to URL when done scrolling (default click behavior)
+           window.location.hash = hash;
+         });
+       } // End if
+     });
+   });
+   </script>
+   <style>
+      html {
+      font-family: 'Raleway', sans-serif;
+      }
 
-#wrapper::-webkit-scrollbar {
-    width: 8px;
-    height: 10px;
-    -webkit-transition: all .45s ease-in;
-    position: relative;
-}
-#wrapper::-webkit-scrollbar-button:start:decrement, #wrapper::-webkit-scrollbar-button:end:increment {
-    height: 0px;
-    display: block;
-    background-color: transparent;
-}
-#wrapper::-webkit-scrollbar-track-piece {
-    background-color:
-    transparent;
-    -webkit-border-radius: 6px;
-}
-#wrapper::-webkit-scrollbar-thumb:vertical {
-    height: 50px;
-    background-color: #c8c8c8;
-    -webkit-border-radius: 6px;
-    -webkit-transition: all .45s ease-in;
-}
+      #logo {
+      transition: translate .3s;
+      margin: 25px;
+      width: 15em;
+      }
+      #logo:hover {
+      -moz-transform: translate(0px, -5px);
+      -ms-transform: translate(0px, -5px);
+      -o-transform: translate(0px, -5px);
+      -webkit-transform: translate(0px, -5px);
+      transform: translate(0px, -5px);
+      }
+      #navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      }
+      #navbar li {
+      float: left;
+      }
+      #navbar li a {
+      display: block;
+      text-align: right;
+      padding: 16px;
+      text-decoration: none;
+      font-size: 1.5em;
+      color: #000;
+      -o-transition: .3s;
+      -ms-transition: .3s;
+      -moz-transition: .3s;
+      -webkit-transition: .3s;
+      transition: .3s;
+      }
+      #navbar li a:hover {
+      color: #D0D0D0;
+      -moz-transform: translate(0px, -2px);
+      -ms-transform: translate(0px, -2px);
+      -o-transform: translate(0px, -2px);
+      -webkit-transform: translate(0px, -2px);
+      transform: translate(0px, -2px);
+      }
+      #header {
+      //border: 1px solid black;
+      padding: 10px;
+      }
+      #navbarDiv {
+      //border: 1px solid black;
+      display: inline-block;
+      float: right;
+      margin: 50px;
+      }
+      #logoDiv {
+      //border: 1px solid black;
+      display: inline-block;
+      }
+      .typed-cursor {
+      opacity: 1;
+      -webkit-animation: blink 1s infinite;
+      }
+      @-webkit-keyframes blink {
+      0% {
+      opacity: 1;
+      }
+      50% {
+      opacity: 0;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      #hi {
+      font-size: 5em;
+      margin: 0 15%;
+      }
+      #opener {
+      width: 100%; //border: 1px solid black;
+      margin-top: 15%;
+      margin-bottom: 25%;
+      }
+      #underscore {
+      margin: 0 15%;
+      font-size: 3em;
+      }
+      #topcloser{
+      margin: 50px 25px 0px;
+      font-size: 3em
+      }
+      #topcloser a{
+      text-decoration: none;
+      color: #737373;
+      -o-transition: .3s;
+      -ms-transition: .3s;
+      -moz-transition: .3s;
+      -webkit-transition: .3s;
+      transition: .3s;
+      }
+      #topcloser a:hover{
+      color: #000;
+      }
+      #contact{
 
-#content {
-    width: 850px;
-    margin: 0 auto 0 auto;
-    padding: 30px 0 30px 0;
-}
+      text-align: center;
+      width: 70%;
+      left: 0;
+      right: 0;
+      margin: 10% auto 0 auto;
+      }
+      .portfolioItem h1{
+        float: left;
+        margin: 0px;
+        margin-left: 0.5em;
+        padding-top: 0.25em;
+      }
+      #date{
 
-/**
- *
-    Headings
- *
- */
+        float:right;
+        font-size: 1em;
+        margin-top: 1em;
+        margin-right: 1em;
+        margin-bottom: 0px;
+      }
+      .portfolioItem{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #e8e8e8;
 
-h1, h2, h3, h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin: 0.5rem 0;
-}
+      }
 
-h1, h2, h3, h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin: 0.5rem 0;
-}
+      .portfolioItem p{
+        margin-left:1em;
+      }
+      #tools{
+        padding-bottom: 1em;
+        margin-bottom:0px;
+      }
+      #two{
+        background-color:#F5F5F5;
+      }
+      #github{
+        float:right;
+        width: 3em;
+        margin-right: 1em;
+        margin-top: 1em;
+      }
+      #portfolioHeader{
+        margin-left: 10%;
+        font-size: 2em;
+      }
+      #email{
+        color: #e5e5e5;
+      }
+      #closerimage{
+        width: 10%;
+        margin: 5% 0;
+      }
+      @media screen and (max-width: 1280px){
+        #hi{
+          font-size: 3em;
+        }
+      }
+      @media screen and (max-width: 414px){
+        #hi{
+          font-size: 2em;
+        }
 
-h1, 
-h2, 
-h3 { margin-bottom: 1rem; }
-
-h1 { font-size: 2.75rem; }
-h2 { font-size: 2.25rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.00rem; }
-h6 { font-size: 0.85rem; }
-
-/**
- *
-	Paragraphs
- *
- */
-
-p {
-	margin: 0 0 1.5em;
-}
-
-/**
- *
-    Block quotes
- *
- */
-
-blockquote {
-    margin: 0 0 1.5em;
-    width: 96%;
-    padding: 0 10px;
-    border-left: 3px solid #ddd;
-    color: #777;
-}
-
-/**
- *
-	Code Blocks
- *
- */
-
-pre code {
-	word-wrap: normal;
-	white-space: pre-wrap;
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    -webkit-border-radius: 0;
-}
-
-pre {
-	white-space: pre-wrap;
-    width: 96%;
-    margin-bottom: 24px;
-    overflow: hidden;
-    padding: 3px 10px;
-    -webkit-border-radius: 3px;
-    background-color: #eee;
-    border: 1px solid #ddd;
-}
-
-code {
-	white-space: nowrap;
-	font-family: monospace;
-    padding: 2px;
-    -webkit-border-radius: 3px;
-    background-color: #eee;
-    border: 1px solid #ddd;
-}
-
-small {
-	font-size: 65%;
-}
-
-/**
- *
-    Dictionary Definition
- *
- */
-
-dt {
-	display: inline;
-    font-weight:bold;
-}
-
-dd {
-	display: block;
-}
-
-/**
- *
-    Anchors
- *
- */
-
-a {
-    color: #308bd8;
-    text-decoration:none;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-/**
- *
-    Horizontal rules
- *
- */
-
-hr {
-    width: 100%;
-    margin: 3em auto;
-    border: 0;
-    color: #eee;
-    background-color: #ccc;
-    height: 1px;
-    -webkit-box-shadow:0px 1px 0px rgba(255, 255, 255, 0.75);
-}
-
-/**
- *
-    Lists
- *
- */
-
-ol, ul {
-    list-style-position: outside;
-    padding-left: 0;
-    margin-left: 1.5em;
-}
-
-ol li, ul li {
-    text-align: -webkit-match-parent;
-}
-
-li p {
-    margin: 0.5em 0 0.5em;
-}
-
-ol ol, ol ul, ul ul, ul ol {
-    padding-left: 1.5em;
-}
-
-/**
- *
-    Tables
- *
- */
-
-table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 24px;
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-spacing: 0;
-}
-
-table th {
-    padding: 3px 10px;
-    background-color: #eee;
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-}
-
-table tr {
-}
-
-table td {
-    padding: 3px 10px;
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-}
-
-/**
- *
-    Images
- *
- */
-
-img {
-    border: none;
-    display: block;
-    margin: 1em auto;
-    max-width: 100%;
-}
-
-/**
- *
-    Marks
- *
- */
-
-mark {
-    background: #fefec0;
-    padding:1px 3px;
-}
-
-/**
- *
-    Footnotes
- *
- */
-.footnote {
-    font-size: 0.8rem;
-    vertical-align: super;
-}
-.footnotes ol {
-    font-weight: bold;
-}
-.footnotes ol li {
-    text-align: -webkit-match-parent;
-}
-
-.footnotes ol li p {
-    font-weight: normal;
-}
-
-/**
- *
-    Figures and Captions
- *
- */
-caption {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-figure {
-    display: block;
-    text-align: center;
-}
-
-figcaption {
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-/**
- *
-    Custom classes
- *
- */
-
-.shadow {
-    -webkit-box-shadow: 0 2px 4px #999;
-}
-
-.source {
-    text-align: center;
-    font-size: 0.8em;
-    color: #777;
-    margin: -40px auto;
-}
-#wrapper {
-    width: 99.9%;
-}
-#content {
-    width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Mobile support */
-@media only screen and (max-device-width:1024px) {
-    html {
-        overflow: auto;
-    }
-
-    #wrapper {
-        overflow: auto;
-        position: relative;
-    }
-}/* html elements */
-
-body {
-    background-color: #1a1a1a;
-    color: #bebebe;
-}
-a {
-    color: #308bd8;
-}
-hr {
-    color: #666;
-    background-color: #666;
-    -webkit-box-shadow: none;
-}
-pre {
-    background-color: #222;
-    border-color: #3c3c3c;
-}
-code {
-    background-color: #222;
-    border-color: #3c3c3c;
-}
-blockquote {
-    border-color: #333;
-    color: #999;
-}
-table {
-    border-color: #3c3c3c;
-}
-table th {
-    background-color: #222;
-    border-color: #3c3c3c;
-}
-table td {
-    border-color: #3c3c3c;
-}
-mark {
-    background: #bc990b;
-    color:#000;
-}
-
-/* unique elements */
-
-#wrapper::-webkit-scrollbar-thumb:vertical {
-    background-color: #525252;
-}
-#top-fader {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(26,26,26,1)), to(rgba(26,26,26,0)));
-}
-#bottom-fader {
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(26,26,26,1)), to(rgba(26,26,26,0)));
-}
-
-/* custom formatting classes */
-
-.shadow {
-    -webkit-box-shadow: 0 2px 4px #000;
-}@media print {
-/* Printing support.
- * Override all printing colors to match the Light theme.
- */
-img, pre, blockquote, table, figure {
-    page-break-inside: avoid;
-}
-body {
-    background-color:#fff;
-}
-#wrapper {
-    position: static;
-    overflow: hidden;
-    color: #000;
-    width: 100%;
-    margin: 0 auto;
-}
-.footnotes {
-    page-break-before: always;
-}
-#content {
-    margin: 0 auto;
-    padding: 0;
-    width: 98%;
-}
-#top-fader, #bottom-fader {
-    display: none;
-}
-hr {
-    color:#ddd;
-    background-color:#ddd;
-    -webkit-box-shadow:0px 1px 0px #ddd;
-}
-pre {
-    background-color:transparent;
-    border: 1px solid #ddd;
-}
-code {
-    background-color:transparent;
-    border: 1px solid #ddd;
-}
-blockquote {
-    border-left: 3px solid #ddd;
-    color: #000;
-}
-ol {
-    /*
-     * Override the list style when printing to ensure list
-     * markers won't get cut.
-     */
-    list-style-position: inside;
-    padding-left: 0;
-    margin-left: 0;
-}
-table {
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-}
-table th {
-    background-color:transparent;
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-}
-table td {
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-}
-mark {
-    background:transparent;
-    color: #000;
-}
-.source {
-    color: #000;
-}
-}
-  </style>
+      }
+   </style>
 </head>
 <body>
-  <div id="wrapper">
-    <div id="content">
-<h1>The Romancers</h1>
+   <div id="header">
+      <div id="logoDiv">
+         <a href="index.html"><img id="logo" src="logo.png"></a>
+      </div>
+      <div id="navbarDiv">
+         <ul id="navbar">
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </div>
+   </div>
+   <div id="opener">
+      <div class="container">
+         <p id="hi">Hi. I'm
+            <span class="write"></span>
+         </p>
+         <p id="underscore">Check out some of my work below.</p>
+      </div>
+   </div>
+   <div id="portfolio">
+     <h1 id = "portfolioHeader">Some cool things I've been working on recently</h1>
+      <a name="portfolio"></a>
+      <div class = "portfolioItem">
+        <h1>SOAR/UE4 Integration</h1>
+        <p id = "date">SUMMER 2017</p>
+        <br>
+        <br>
+    <a href = "https://github.com/SoarGroup/UE4-Integration"><img id = "github" src = "github.png"></a>
+        <p id = "description">Connected the SOAR Cognitive Architecture to Unreal Engine to create 3D games with self-controlled agents.</p>
 
-<h6>Sound Design Outline</h6>
+        <p id = "tools">C++, C#, Unreal Engine</p>
 
-<h6>H Reeves, C Walton 2017</h6>
+      </div>
+      <div class = "portfolioItem" id = "two">
+        <h1>Traffic Light</h1>
+        <p id = "date">SPRING 2017</p>
+        <br>
+        <br>
+        <a href = "https://github.com/hreeves9/TrafficLight"><img id = "github" src = "github.png"></a>
+        <p id = "description">A social media platform created so that friends could communicate when they are available or busy.</p>
+        <p id = "tools">Flask, Python, Xcode, Objective-C, MySQL</p>
+      </div>
+      <div class = "portfolioItem">
+        <h1>The Bathroom Wall</h1>
+        <p id = "date">SPRING 2016</p>
+        <br>
+        <br>
+        <a href = "https://github.com/hreeves9/bathroomwall"><img id = "github" src = "github.png"></a>
+        <p id = "description">An anonymous social media platform that allowed users to leave comments, as if they were writing on the bathroom wall.</p>
+        <p id = "tools">Flask, Python, MySQL</p>
+      </div>
+      <div class = "portfolioItem" id ="two">
+        <h1>Reddit Word of the Day Bot</h1>
+        <p id = "date">2014</p>
+        <br>
+        <br>
+        <a href = "https://github.com/hreeves9/RedditWOTDBot"><img id = "github" src = "github.png"></a>
+        <p id = "description">Created a Reddit bot that picked a word of the day and notified users when it was used; never launched.</p>
+        <p id = "tools">PRAW, Python</p>
+      </div>
+      <div class = "portfolioItem">
+        <h1>Pirates of Penzance Set Design</h1>
+        <p id = "date">SUMMER/FALL 2017</p>
+        <br>
+        <br>
+        <p id = "description">Designed a 3D modeled set for the Pirates of Penzance Musical with Oculus Rift integration.</p>
+        <p id = "tools">Unity, Blender, C#</p>
+      </div>
 
-<p><br></p>
+   </div>
+   <div id="contact">
 
-<h3>Overview</h3>
-
-<h5>Due to the fact that there are no songs, this allows us to add our own creativity with ambient sounds and sound effects to place the setting whilst keeping the sound from being &#8220;cheesy&#8221;.</h5>
-
-<h3>Sound Effects</h3>
-
-<h4>Specified by Script</h4>
-
-<ul>
-<li><p>Romantic music such as &#8220;Romeo and Juliet Overture&#8221; by Tchaikovsky</p></li>
-<li>Music to indicate rapid pace such as &#8220;William Tell Overture&#8221;
-
-<ul>
-<li>May have to change? Contemporary music?</li>
-</ul></li>
-<li>Ambience of scene added
-
-<ul>
-<li>Italian Street Sounds
-<br>
-<audio controls="controls"><source type="audio/mp3" src="marketplace.mp3"></source></audio></li>
-<li>Garden sounds
-<br>
-<audio controls="controls"><source type="audio/mp3" src="garden.mp3"></source></audio></li>
-</ul></li>
-</ul>
-    </div>
-  </div> <!-- End wrapper -->
+      <p id = "topcloser">I'm always looking for new freelance projects. Shoot me an <a id = "email" href="mailto:harvey_reeves9@icloud.com">email</a> or hit me up on social media.</p>
+      <div id = "buttons">
+        <a href = "https://twitter.com/harvey_reeves9"><img id = "closerimage" src = "twitter.png"></a>
+        <a href = "https://instagram.com/harvey_reeves9"><img id = "closerimage" src = "instagram.png"></a>
+        <a href = "https://github.com/hreeves9"><img id = "closerimage" src = "github2.png"></a>
+      </div>
+   </div>
+   <script type="text/javascript">
+      $(function() {
+        $(".write").typed({
+          strings: ["a web developer.", "a programmer.", "a theatrical designer.", "Harvey."],
+          smartBackspace: true,
+        });
+      });
+   </script>
 </body>
 </html>
