@@ -1,315 +1,345 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Harvey Reeves</title>
-   <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113133588-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvey Reeves - Developer and ML Researcher</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-  gtag('config', 'UA-113133588-1');
-</script>
-   <script>
-   $(document).ready(function(){
-     // Add smooth scrolling to all links
-     $("a").on('click', function(event) {
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-       // Make sure this.hash has a value before overriding default behavior
-       if (this.hash !== "") {
-         // Prevent default anchor click behavior
-         event.preventDefault();
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-         // Store hash
-         var hash = this.hash;
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
 
-         // Using jQuery's animate() method to add smooth page scroll
-         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-         $('html, body').animate({
-           scrollTop: $(hash).offset().top
-         }, 800, function(){
-
-           // Add hash (#) to URL when done scrolling (default click behavior)
-           window.location.hash = hash;
-         });
-       } // End if
-     });
-   });
-   </script>
-   <style>
-      html {
-      font-family: 'Raleway', sans-serif;
-      }
-
-      #logo {
-      transition: translate .3s;
-      margin: 25px;
-      width: 15em;
-      }
-      #logo:hover {
-      -moz-transform: translate(0px, -5px);
-      -ms-transform: translate(0px, -5px);
-      -o-transform: translate(0px, -5px);
-      -webkit-transform: translate(0px, -5px);
-      transform: translate(0px, -5px);
-      }
-      #navbar {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      }
-      #navbar li {
-      float: left;
-      }
-      #navbar li a {
-      display: block;
-      text-align: right;
-      padding: 16px;
-      text-decoration: none;
-      font-size: 1.5em;
-      color: #000;
-      -o-transition: .3s;
-      -ms-transition: .3s;
-      -moz-transition: .3s;
-      -webkit-transition: .3s;
-      transition: .3s;
-      }
-      #navbar li a:hover {
-      color: #D0D0D0;
-      -moz-transform: translate(0px, -2px);
-      -ms-transform: translate(0px, -2px);
-      -o-transform: translate(0px, -2px);
-      -webkit-transform: translate(0px, -2px);
-      transform: translate(0px, -2px);
-      }
-      #header {
-      //border: 1px solid black;
-      padding: 10px;
-      }
-      #navbarDiv {
-      //border: 1px solid black;
-      display: inline-block;
-      float: right;
-      margin: 50px;
-      }
-      #logoDiv {
-      //border: 1px solid black;
-      display: inline-block;
-      }
-      .typed-cursor {
-      opacity: 1;
-      -webkit-animation: blink 1s infinite;
-      }
-      @-webkit-keyframes blink {
-      0% {
-      opacity: 1;
-      }
-      50% {
-      opacity: 0;
-      }
-      100% {
-      opacity: 1;
-      }
-      }
-      #hi {
-      font-size: 5em;
-      margin: 0 15%;
-      }
-      #opener {
-      width: 100%; //border: 1px solid black;
-      margin-top: 15%;
-      margin-bottom: 25%;
-      }
-      #underscore {
-      margin: 0 15%;
-      font-size: 3em;
-      }
-      #topcloser{
-      margin: 50px 25px 0px;
-      font-size: 3em
-      }
-      #topcloser a{
-      text-decoration: none;
-      color: #737373;
-      -o-transition: .3s;
-      -ms-transition: .3s;
-      -moz-transition: .3s;
-      -webkit-transition: .3s;
-      transition: .3s;
-      }
-      #topcloser a:hover{
-      color: #000;
-      }
-      #contact{
-
-      text-align: center;
-      width: 70%;
-      left: 0;
-      right: 0;
-      margin: 10% auto 0 auto;
-      }
-      .portfolioItem h1{
-        float: left;
-        margin: 0px;
-        margin-left: 0.5em;
-        padding-top: 0.25em;
-      }
-      #date{
-
-        float:right;
-        font-size: 1em;
-        margin-top: 1em;
-        margin-right: 1em;
-        margin-bottom: 0px;
-      }
-      .portfolioItem{
-        width: 80%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: #e8e8e8;
-
-      }
-
-      .portfolioItem p{
-        margin-left:1em;
-      }
-      #tools{
-        padding-bottom: 1em;
-        margin-bottom:0px;
-      }
-      #two{
-        background-color:#F5F5F5;
-      }
-      #github{
-        float:right;
-        width: 3em;
-        margin-right: 1em;
-        margin-top: 1em;
-      }
-      #portfolioHeader{
-        margin-left: 10%;
-        font-size: 2em;
-      }
-      #email{
-        color: #e5e5e5;
-      }
-      #closerimage{
-        width: 10%;
-        margin: 5% 0;
-      }
-      @media screen and (max-width: 1280px){
-        #hi{
-          font-size: 3em;
-        }
-      }
-      @media screen and (max-width: 414px){
-        #hi{
-          font-size: 2em;
-        }
-
-      }
-   </style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-   <div id="header">
-      <div id="logoDiv">
-         <a href="index.html"><img id="logo" src="logo.png"></a>
-      </div>
-      <div id="navbarDiv">
-         <ul id="navbar">
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-      </div>
-   </div>
-   <div id="opener">
-      <div class="container">
-         <p id="hi">Hi. I'm
-            <span class="write"></span>
-         </p>
-         <p id="underscore">Check out some of my work below.</p>
-      </div>
-   </div>
-   <div id="portfolio">
-     <h1 id = "portfolioHeader">Some cool things I've been working on recently</h1>
-      <a name="portfolio"></a>
-      <div class = "portfolioItem">
-        <h1>SOAR/UE4 Integration</h1>
-        <p id = "date">SUMMER 2017</p>
-        <br>
-        <br>
-    <a href = "https://github.com/SoarGroup/UE4-Integration"><img id = "github" src = "github.png"></a>
-        <p id = "description">Connected the SOAR Cognitive Architecture to Unreal Engine to create 3D games with self-controlled agents.</p>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-        <p id = "tools">C++, C#, Unreal Engine</p>
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <h1>Hello, I'm <span class="name">Harvey Reeves</span>.</h1>
+          <p>Developer and Machine Learning Researcher</p>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Navigation -->
+<div id="nav">
+  <nav class="navbar navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Harvey Reeves</a> </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"> <a href="#page-top"></a> </li>
+          <li> <a class="page-scroll" href="#about">About</a> </li>
+          <li> <a class="page-scroll" href="#skills">Skills</a> </li>
+          <li> <a class="page-scroll" href="#portfolio">Portfolio</a> </li>
+          <li> <a class="page-scroll" href="#resume">Resume</a> </li>
+          <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>About Me</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center"><img src="img/about.jpg" class="img-responsive"></div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="about-text">
+          <p>My name is Harvey Reeves. I'm from Beverly Hills, Michigan and I'm currently living in Ann Arbor, Michigan. I'm a student at the University of Michigan studying Computer Science in the College of Engineering. I have a strong interest in machine learning and its applications to the world around us.</p>
+          <p>If you'd like to learn about my work, you can check out my portfolio below or download my resume. If you have any questions or comments, feel free to shoot me an email.</p>
+          <p class="text-center"><a class="btn btn-primary" href="HReevesResume.pdf"><i class="fa fa-download"></i> Download Resume</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Skills Section -->
+<div id="skills" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Skills</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="90"> <span class="percent">95</span> </span>
+        <h4>Python</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="85"> <span class="percent">85</span> </span>
+        <h4>C++</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="80"> <span class="percent">80</span> </span>
+        <h4>HTML5</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="80"> <span class="percent">80</span> </span>
+        <h4>Photoshop</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="70"> <span class="percent">70</span> </span>
+        <h4>MATLAB</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="65"> <span class="percent">65</span> </span>
+        <h4>Keras</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Portfolio</h2>
+      <hr>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".machinelearning">Machine Learning</a></li>
+            <li><a href="#" data-filter=".web">Web Design</a></li>
+            <li><a href="#" data-filter=".app">App Development</a></li>
+
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+
+        <div class="col-sm-3 col-md-2 col-lg-2 app">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="A social media platform created so that friends could communicate when they are available or busy.<br><br> Python, Flask, HTML5 - Fall 2017" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Traffic Light</h4>
+                <small>App Development</small> </div>
+              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Traffic Light"> </a> </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-2 col-lg-2 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="An anonymous social media platform that allowed users to leave comments, as if they were writing on the bathroom wall. <br><br> Python, Flask - Spring/Summer 2016" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>The Bathroom Wall</h4>
+                <small>Web Design</small> </div>
+              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="The Bathroom Wall"> </a> </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-2 col-lg-2 machinelearning">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="A convolutional neural network that categorizes the movements of rats as they develop Parkinson's Disease. <br><br> Python, Keras, Numpy - Fall/Winter 2018" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Skilled Reaching Project</h4>
+                <small>Machine Learning</small> </div>
+              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Skilled Reaching Project"> </a> </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-2 col-lg-2 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="A Reddit bot that pick a word and notified users when it was used. <br><br> Python, PRAW - 2014" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Reddit Word of the Day Bot</h4>
+                <small>Web Design</small> </div>
+              <img src="img/portfolio/04-small.png" class="img-responsive" alt="Reddit Word of the Day"> </a> </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-2 col-lg-2 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="A web app for organizing hours and data for my high school's branch of National Honors Society. <br><br> Python, Flask - Winter 2017" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>NHS Web App</h4>
+                <small>Web Design</small> </div>
+              <img src="img/portfolio/05-small.png" class="img-responsive" alt="NHS Web App"> </a> </div>
+          </div>
+        </div>
+
 
       </div>
-      <div class = "portfolioItem" id = "two">
-        <h1>Traffic Light</h1>
-        <p id = "date">SPRING 2017</p>
-        <br>
-        <br>
-        <a href = "https://github.com/hreeves9/TrafficLight"><img id = "github" src = "github.png"></a>
-        <p id = "description">A social media platform created so that friends could communicate when they are available or busy.</p>
-        <p id = "tools">Flask, Python, Xcode, Objective-C, MySQL</p>
-      </div>
-      <div class = "portfolioItem">
-        <h1>The Bathroom Wall</h1>
-        <p id = "date">SPRING 2016</p>
-        <br>
-        <br>
-        <a href = "https://github.com/hreeves9/bathroomwall"><img id = "github" src = "github.png"></a>
-        <p id = "description">An anonymous social media platform that allowed users to leave comments, as if they were writing on the bathroom wall.</p>
-        <p id = "tools">Flask, Python, MySQL</p>
-      </div>
-      <div class = "portfolioItem" id ="two">
-        <h1>Reddit Word of the Day Bot</h1>
-        <p id = "date">2014</p>
-        <br>
-        <br>
-        <a href = "https://github.com/hreeves9/RedditWOTDBot"><img id = "github" src = "github.png"></a>
-        <p id = "description">Created a Reddit bot that picked a word of the day and notified users when it was used; never launched.</p>
-        <p id = "tools">PRAW, Python</p>
-      </div>
-      <div class = "portfolioItem">
-        <h1>Pirates of Penzance Set Design</h1>
-        <p id = "date">SUMMER/FALL 2017</p>
-        <br>
-        <br>
-        <p id = "description">Designed a 3D modeled set for the Pirates of Penzance Musical with Apple ARKit integration.</p>
-        <p id = "tools">Xcode, Blender, Swift</p>
-      </div>
-      <div class = "portfolioItem" id ="two">
-        <h1>NHS Web App</h1>
-        <p id = "date">Winter 2017</p>
-        <br>
-        <br>
-        <p id = "description">Created web app for organizing hours and data for school's branch of National Honor Society</p>
-        <p id = "tools">Flask, Python</p>
-      </div>
+    </div>
+  </div>
+</div>
 
-   </div>
-   <div id="contact">
+<!-- Resume Section -->
+<div id="resume" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Experience</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+          <li>
+            <div class="timeline-image">
+              <h4>Sept 2018 <br>
+                - <br>
+                Present </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>Leventhal Lab</h4>
+                <h4 class="subheading">Undergraduate Researcher</h4>
+              </div>
+              <div class="timeline-body">
+                <p>I'm working with the Leventhal Lab of the University of Michigan Neuroscience to create convolutional neural networks that classify movements of rats as they develop Parkinson's Disease.</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>May 2017 <br>
+                - <br>
+                Aug 2017 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>University of Michigan AI Group</h4>
+                <h4 class="subheading">Summer Intern</h4>
+              </div>
+              <div class="timeline-body">
+                <p>I worked with a team to implement the SOAR Cognitive Architecture into Unreal Engine 4 to create 3D games with self controlled agents that can make decisions based on changes in their environments.</p>
+              </div>
+            </div>
+          </li>
 
-      <p id = "topcloser">I'm always looking for new freelance projects. Shoot me an <a id = "email" href="mailto:harvey_reeves9@icloud.com">email</a> or hit me up on social media.</p>
-      <div id = "buttons">
-        <a href = "https://twitter.com/harvey_reeves9"><img id = "closerimage" src = "twitter.png"></a>
-        <a href = "https://instagram.com/harvey_reeves9"><img id = "closerimage" src = "instagram.png"></a>
-        <a href = "https://github.com/hreeves9"><img id = "closerimage" src = "github2.png"></a>
+        </ul>
       </div>
-   </div>
-   <script type="text/javascript">
-      $(function() {
-        $(".write").typed({
-          strings: ["a web developer.", "a programmer.", "a theatrical designer.", "Harvey."],
-          smartBackspace: true,
-        });
-      });
-   </script>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title center">
+      <h2>Education</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+
+          <!-- Education Section-->
+
+
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>2018 <br>
+                - <br>
+                2021 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>University of Michigan - Ann Arbor</h4>
+                <h4 class="subheading">Bachelors of Engineering in Computer Science</h4>
+              </div>
+
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <h4>2014 <br>
+                - <br>
+                2018 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>Wylie E. Groves High School</h4>
+                <h4 class="subheading">High School Diploma</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">Graduated with Honors</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Contact</h2>
+      <hr>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
+        <p>Ann Arbor, Michigan</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
+        <p>hreeves@umich.edu</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
+        <p> +1 248 979 4506</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+
+      <div class="social">
+        <ul>
+          <li><a href="https://github.com/hreeves9"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/harvey-reeves-939b32161/"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="fnav">
+      <p>Copyright &copy; 2019 Harvey Reeves.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/easypiechart.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/jquery.counterup.js"></script>
+<script type="text/javascript" src="js/waypoints.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
