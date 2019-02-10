@@ -9,6 +9,48 @@ body, html {
 h1 {
 	font-weight: 700;
 }
+.portfolioItem h1{
+        float: left;
+        margin: 0px;
+        margin-left: 0.5em;
+        padding-top: 0.25em;
+      }
+      #date{
+        float:right;
+        font-size: 1em;
+        margin-top: 1em;
+        margin-right: 1em;
+        margin-bottom: 0px;
+      }
+      .portfolioItem{
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #e8e8e8;
+				font-family: 'Lato', sans-serif;
+      }
+      .portfolioItem p{
+        margin-left:1em;
+
+      }
+      #tools{
+        padding-bottom: 1em;
+        margin-bottom:0px;
+      }
+      #two{
+        background-color:#F5F5F5;
+      }
+      #github{
+        float:right;
+        width: 3em;
+        margin-right: 1em;
+        margin-top: 1em;
+      }
+      #portfolioHeader{
+        margin-left: 10%;
+        font-size: 2em;
+      }
 h1 strong {
 	font-weight: 900;
 }
@@ -248,7 +290,7 @@ hr {
 }
 /* Portfolio Section */
 #portfolio {
-	padding: 80px 0;
+	padding-top: 40px;
 	background: #f4f5f6; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f4f5f6 49%, #ffffff 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(49%, #f4f5f6), color-stop(100%, #ffffff)); /* Chrome,Safari4+ */
