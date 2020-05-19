@@ -1,0 +1,25 @@
+#slantedHeader{
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  color: #FFFFFF;
+  background-image: url("pattern.png");
+  font-family: "Helvetica Neue";
+}
+
+h1{
+	font-family: "Helvetica Neue";
+	margin:0;
+	font-size: 4em;
+	padding-top: 20vh;
+}
+
+h3{
+	font-size: 2em;
+}
+
+
+body{
+  margin:0;
+  overflow: hidden;
+}
